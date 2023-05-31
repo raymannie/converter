@@ -1,13 +1,115 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont, 'San-serif', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+/* 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'San-serif',
     monospace;
+} */
+
+*{
+  box-sizing: border-box;
+}
+
+p{
+  margin: 0;
+}
+
+.main-wrapper{
+  background: #fff;
+  min-height: 100vh;
+  width: 100%;
+  padding: 40px
+}
+
+.main-wrapper-container{
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bg-primary{
+  background: rgb(33, 111, 237);
+}
+
+.right-container{
+  background: rgb(33, 111, 237);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.container{
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.controls{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  padding: 24px 12px 12px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+.input{
+  width: 100%;
+  border: 1px solid rgb(33, 111, 237);
+  height: 40px;
+  border-radius: 4px;
+  margin: 0;
+  padding: 0 10px;
+  font-size: 18px;
+}
+
+.mb-30{
+  margin-bottom: 30px;
+}
+
+
+.btn{
+  min-height: 44px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background: rgb(33, 111, 237);
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.title{
+  text-align: left;
+  font-weight: 500;
+  font-size: 18px;
+  color: #444;
+}
+
+
+.dropdown-cntainer{
+  position: relative
+}
+.dropdown{
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
 }
