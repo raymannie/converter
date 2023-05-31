@@ -15,7 +15,7 @@ const ControlsAlt = ({ selectedCurrency, setSelectedCurrency, amount, data }) =>
                     <span></span>
                     <div>
                         <p>Balance</p>
-                        <p>{getSelectedCurrencyBalannce.sign} {getSelectedCurrencyBalannce.balance}</p>
+                        <p>{getSelectedCurrencyBalannce.sign} {getSelectedCurrencyBalannce.balance.toLocaleString("en-US", { style: "decimal" })}</p>
                     </div>
                 </div>
                 {dropDown && <div className="dropdown">

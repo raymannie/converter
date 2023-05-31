@@ -4,10 +4,8 @@ import ControlsAlt from "./ControlsAlt";
 
 const CurrencyConverter = () => {
 
-    // const [currencies, setCurrencies] = useState([])
     const [selectedCurrency1, setSelectedCurrency1] = useState('NGN')
     const [selectedCurrency2, setSelectedCurrency2] = useState('USD')
-    const [rate, setRate] = useState({})
     const [amount, setAmount] = useState(0)
     const [amount2, setAmount2] = useState('')
 
@@ -34,6 +32,10 @@ const CurrencyConverter = () => {
         },
     ]
 
+    const getSelectedCurrency = (selected) => currencieBalance.find(itm => itm.currency === selected)
+
+    console.log(getSelectedCurrency("USD").sign)
+
 
     const handleCurrencyChange = () => {
         fetch(`https://api.exchangerate-api.com/v4/latest/${selectedCurrency1}`)
@@ -56,7 +58,7 @@ const CurrencyConverter = () => {
 
     useEffect(() => {
         handleCurrencyChange()
-    }, [selectedCurrency2, amount])
+    }, [selectedCurrency2, amount, amount2, selectedCurrency1])
 
 
     return (
@@ -86,8 +88,10 @@ const CurrencyConverter = () => {
                             </div>
                             <div className='right-container'>
                                 <div>
-                                    <p>You are converting</p>
-                                    <p>You'll get</p>
+                                    <p>You are converting {`${getSelectedCurrency(selectedCurrency1).sign}${amount.toLocaleString("en-US", { style: "decimal" }) || 0}`}</p>
+                                    <br />
+                                    <p>You'll get {`${getSelectedCurrency(selectedCurrency2).sign}${amount2}`}</p>
+                                    <br />
                                     <p>You are converting</p>
                                 </div>
                             </div>
