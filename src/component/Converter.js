@@ -41,15 +41,11 @@ const CurrencyConverter = () => {
         fetch(`https://api.exchangerate-api.com/v4/latest/${selectedCurrency1}`)
             .then((response) => response.json())
             .then((data) => {
-                // console.log(data.rates);
-                // setRate(data.rates)
                 const conversionRate = data.rates[selectedCurrency2]
 
                 const conversionValue = conversionRate * amount
 
                 setAmount2(conversionValue.toFixed(2))
-
-                console.log(selectedCurrency2, conversionValue);
 
             }).catch((err) => {
                 console.log(err);

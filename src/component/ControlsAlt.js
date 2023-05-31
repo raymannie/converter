@@ -9,9 +9,9 @@ const ControlsAlt = ({ selectedCurrency, setSelectedCurrency, amount, data }) =>
 
     return (
         <div className='mb-30 dropdown-cntainer' >
-            <div className="dropdown-cntainer" onClick={() => setdropDown(!dropDown)}>
+            <div className="dropdown-cntainer" onBlur={() => setdropDown(false)} onClick={() => setdropDown(!dropDown)}>
                 <div className='controls'>
-                    <p cla>Convert to</p>
+                    <p>Convert to</p>
                     <span></span>
                     <div>
                         <p className="small-text">Balance</p>
