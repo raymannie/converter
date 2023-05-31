@@ -62,7 +62,7 @@ const CurrencyConverter = () => {
             <div className="App">
                 <div className='main-wrapper'>
                     <div className='main-wrapper-container'>
-                        <h2 className='title'>Convert from one to annother currency</h2>
+                        <h2 className='title'>Convert from one to another currency</h2>
                         <div className='container'>
                             <div>
                                 <Controls

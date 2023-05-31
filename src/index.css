@@ -75,6 +75,19 @@ p{
   margin-bottom: 20px;
 }
 
+.controls span{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  transform: rotate(45deg);
+  border-bottom: 2px solid #aaa;
+  border-right: 2px solid #aaa;
+}
+
+.controls span.open{
+  transform: rotate(-135deg);
+}
+
 .input{
   width: 100%;
   border: 1px solid rgb(33, 111, 237);
@@ -119,12 +132,13 @@ p{
   position: absolute;
   left: 0;
   top: 100%;
-  width: 100%;
+  width: 56%;
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
   z-index: 3;
+  box-shadow: 0px 8px 20px rgba(26,21,61,0.2);
 }
 .dropdown p{
   padding: 10px;
