@@ -12,7 +12,7 @@ const ControlsAlt = ({ selectedCurrency, setSelectedCurrency, amount, data }) =>
             <div className="dropdown-cntainer" onBlur={() => setdropDown(false)} onClick={() => setdropDown(!dropDown)}>
                 <div className='controls'>
                     <p>Convert to</p>
-                    <span></span>
+                    <span className={dropDown ? 'open' : ''}></span>
                     <div>
                         <p className="small-text">Balance</p>
                         <p>{getSelectedCurrencyBalannce.sign} {getSelectedCurrencyBalannce.balance.toLocaleString("en-US", { style: "decimal" })}</p>
