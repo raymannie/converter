@@ -11,10 +11,10 @@ const ControlsAlt = ({ selectedCurrency, setSelectedCurrency, amount, data }) =>
         <div className='mb-30 dropdown-cntainer' >
             <div className="dropdown-cntainer" onClick={() => setdropDown(!dropDown)}>
                 <div className='controls'>
-                    <p>NGN Wallet</p>
+                    <p cla>Convert to</p>
                     <span></span>
                     <div>
-                        <p>Balance</p>
+                        <p className="small-text">Balance</p>
                         <p>{getSelectedCurrencyBalannce.sign} {getSelectedCurrencyBalannce.balance.toLocaleString("en-US", { style: "decimal" })}</p>
                     </div>
                 </div>

@@ -14,7 +14,7 @@ const Controls = ({ selectedCurrency, setSelectedCurrency, handleCurrencyChange,
                     <p>NGN Wallet</p>
                     <span></span>
                     <div>
-                        <p>Balance</p>
+                        <p className="small-text">Balance</p>
                         <p>{getSelectedCurrencyBalannce.sign}{getSelectedCurrencyBalannce.balance.toLocaleString("en-US", { style: "decimal" })}</p>
                     </div>
                 </div>
