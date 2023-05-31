@@ -117,4 +117,13 @@ p{
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
+  overflow: hidden;
+  z-index: 3;
+}
+.dropdown p{
+  padding: 10px;
+  cursor: pointer;
+}
+.dropdown p:hover{
+  background: #f9f9f9;
 }

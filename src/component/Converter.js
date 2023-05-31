@@ -92,7 +92,7 @@ const CurrencyConverter = () => {
                                     <br />
                                     <p>You'll get {`${getSelectedCurrency(selectedCurrency2).sign}${amount2}`}</p>
                                     <br />
-                                    <p>You are converting</p>
+                                    <p>Source: {selectedCurrency1} Wallet</p>
                                 </div>
                             </div>
                         </div>
